@@ -1,0 +1,51 @@
+import java.util.Scanner;
+public class group_3_name_age_student_using_if {
+public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    String name;
+    int age;
+    boolean isstudent;
+    //inputs
+    System.out.print("Enter your name : ");
+    name=sc.nextLine();
+    System.out.print("Enter your age : ");
+    age=sc.nextInt();
+    System.out.print("Are you student (true/false) : ");
+    isstudent=sc.nextBoolean();
+    //Group 1 this group is checking for wether user have input his/her name or not.....
+
+    System.out.println("\n\n\n");
+    if (name.isEmpty()){
+        System.out.println("Your did'nt enter your name 😡😡😡😡");
+    }
+    else {
+        System.out.println("Hello "+name+"! 😊😊😊😊");
+    }
+
+
+    //Group 2  this group is checking for age .....
+
+    if (age==0){
+        System.out.println("Hey!! you are baby 👼");
+    }
+    else if (age<18){
+        System.out.println("You are tenegeer 👦");
+    } else if (age>=18 && age<55) {
+        System.out.println("You are young 🙍‍♂️");
+    }
+    else {
+        System.out.println("You are old 👴");
+    }
+
+    //Group 3 this group is checking for boolean
+    if(isstudent){
+        System.out.println("You are student !👨‍🎓");
+    }
+    else {
+        System.out.println("You are not a student !!'😒😒😒😒");
+    }
+
+    sc.close();
+
+}
+}
