@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class addnig {
+    static void main() {
+
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter the name of costumer :");
+        String name=sc.nextLine();
+        System.out.print("enter the number of costumer : ");
+        long number= sc.nextLong();
+        System.out.print("Item Name : ");
+        String item=sc.next() ;
+        System.out.print("Quantity : ");
+        float qut= sc.nextFloat();
+        System.out.print("price : ");
+        float price =sc.nextFloat();
+        float total = qut*price;
+        System.out.println(total);
+        System.out.print("Money recived : ");
+        int rec=sc.nextInt();
+
+        float retu=rec-total;
+       System.out.println("\n\n");
+       System.out.print("Name : ");
+       String ustring = name.toUpperCase();
+       System.out.println(ustring);
+       System.out.print("Number : ");
+       System.out.println(number);
+       System.out.println("---------------------------------");
+       System.out.println("Item Name\tQuantity\tPrice");
+       String nitem = item.toUpperCase();
+       System.out.println(nitem+"\t\t "+qut+"\t\t"+price );
+      /* System.out.print("Quantity : ");
+       System.out.println(qut);
+       System.out.print("Price : ");
+       System.out.println(price);*/
+       System.out.print("----------------------------------\nTotal cost : ");
+       System.out.println(total);
+       System.out.print("----------------------------------\nMoney recived : ");
+       System.out.println(rec);
+System.out.print("Return : ");
+System.out.println(retu);
+    }
+}
