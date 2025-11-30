@@ -1,0 +1,72 @@
+import java.util.Scanner;
+
+public class billl {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        String item;
+        String username;
+        double number;
+        double quantity = 0;
+        int apple=250;
+        int banana =160;
+        int ball=40;
+        String input;
+        double amount = 0;
+        double totalamount=0;
+        StringBuilder billItems =new StringBuilder();
+        System.out.print("Costumer name : ");
+        username=sc.nextLine().toUpperCase();
+
+        System.out.print("Number : ");
+        number= sc.nextDouble();
+        sc.nextLine();
+        do {
+
+            System.out.print("Item : ");
+            item = sc.nextLine().toUpperCase();
+            if (item.equalsIgnoreCase("apple")) {
+                System.out.print("Quantity : ");
+                quantity = sc.nextDouble();
+                sc.nextLine();
+                amount = quantity * apple;
+                billItems.append(String.format("%-12s %-12.2f %d %.2f\n", "APPLE", quantity, apple,amount));
+
+            } else if (item.equalsIgnoreCase("BANANA")) {
+                System.out.print("Quantity : ");
+                quantity = sc.nextDouble();
+                sc.nextLine();
+                amount = quantity * banana;
+                billItems.append(String.format("%-12s %-12.2f %d %.2f\n", "BANANA", quantity, banana,amount));
+            } else if (item.equalsIgnoreCase("BALL")) {
+                System.out.print("Quantity : ");
+                quantity = sc.nextDouble();
+                sc.nextLine();
+                amount = quantity * ball;
+                billItems.append(String.format("%-12s %-12.2f %d  %-15.2f\n", "BALL", quantity, ball,amount));
+            } else {
+                System.out.println("Not available!!");
+
+            }
+            System.out.print("To add item press (Y)\nTo end press(N)");
+            input = sc.nextLine().toUpperCase();
+            totalamount += amount;
+        } while( !input.equalsIgnoreCase("n") );
+
+
+
+        //bill output
+        System.out.println("\n");
+        System.out.println("---------------------------------------");
+
+        System.out.println("                XYZSHOP");
+        System.out.println("---------------------------------------");
+        System.out.println("Costumer name : "+username);
+        System.out.printf("Number : %.0f",number);
+        System.out.println("\n---------------------------------------");
+        System.out.printf("Item        Quantity     Price     Total\n");
+        System.out.println(billItems.toString());
+
+        System.out.println("\t\t\ttotal amount = " + totalamount);
+        sc.close();
+    }
+}
